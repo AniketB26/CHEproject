@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Add a loading spinner to the page while it is loading
+const loadingSpinner = document.querySelector('.loading-spinner');
+window.addEventListener('load', () => {
+  loadingSpinner.classList.add('hidden');
+});
+
+// Add a smooth scroll animation to all internal links
+const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+internalLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Get the section corresponding to the clicked link
+    const sectionId = link.getAttribute('href');
+    const section = document.querySelector(sectionId);
+
+    // Scroll to the section with a smooth animation
+    window.scrollTo({
+      top: section.offsetTop,
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Add a parallax effect to the background image
+const backgroundImage = document.querySelector('soilerosin.background-image');
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  // Move the background image at a slower speed than the scroll position
+  backgroundImage.style.transform = `translateY(${scrollY * 0.5}px)`;
+});
+
+// Add a sticky navigation bar
+const navigationBar = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 0) {
+    navigationBar.classList.add('sticky');
+  } else {
+    navigationBar.classList.remove('sticky');
+  }
+});
+
+// Add a dark mode toggle
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soil Erosion Information Center</title>
+  <link rel="stylesheet" href="style.css">
+<style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+nav {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section p {
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+</style>
+</head>
+<body>
+  <header>
+    <img src="soil-erosion-definition.jpg" alt="Image of soil erosion">
+    <h1>Soil Erosion Information Center</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="causes.html">Causes of Soil Erosion</a></li>
+      <li><a href="impacts.html">Impacts of Soil Erosion</a></li>
+      <li><a href="prevention.html">Prevention of Soil Erosion</a></li>
+      <li><a href="https://timesofindia.indiatimes.com/topic/soil-erosion/news">Soil Erosion News and Updates</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="welcome">
+      <h2>Welcome to the Soil Erosion Information Center</h2>
+      <p>This website is dedicated to providing comprehensive information about soil erosion, its causes, impacts, and strategies for prevention and control. We aim to educate and empower individuals, communities, and organizations to take action to protect this vital resource.</p>
+    </section>
+
+    <section class="resources">
+      <h3>Explore our Soil Erosion Resource Library</h3>
+      <ul>
+        <li><a href="https://eos.com/blog/soil-erosion/">Detailed articles and guides on the causes, impacts, and prevention of soil erosion</a></li>
+        <li><a href="https://www.intechopen.com/chapters/75436">Case studies of successful soil erosion control projects</a></li>
+        <li><a href="https://www.sciencedirect.com/science/article/pii/S0048969722004818">Tools and resources for educators, policymakers, and land managers</a></li>
+        <li><a href="https://dust.swclimatehub.info/glossary">A glossary of soil erosion terms</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Soil Erosion Information</p>
+  </footer>
+</body>
+</html>
